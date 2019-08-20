@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Menu Add</title>
+        <link rel="stylesheet" href="..\style.css">
+        <script type="text/javascript" scr="save.js"></script>
+    </head>
+    <body>
+    <form>
+        <label for="coffee_name">커피 이름</label>
+        <input type="text" name="커피이름" placeholder="커피이름" id="coffee_name"><br>
+        <label for="coffee_price">가격</label>
+        <input type="text" name="커피가격" placeholder="가격" id="coffee_price"><br>
+        <label for="coffee_photo">사진</label>
+        <input type="file" name="사진" id="coffee_photo"><br>
+        <div id="add_button">
+            <input type="button" value="등록" onclick="insert()">
+            <input type="button" value="취소" onclick="location.href='menu_add.html'">
+            <input type="button" value="이전" onclick="location.href='../Admenu.html'">
+        </div>
+    </form>
+        <div id="display">
+        </div>
+    </body>
+</html>
