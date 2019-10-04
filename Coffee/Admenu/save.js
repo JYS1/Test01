@@ -1,20 +1,23 @@
-var coffee_name = [];
-var coffee_price = [];
-var coffee_photo = [];
+var names = [];
+var prices = [];
 
-var nameInput = document.getElementById("coffee_name");
-var priceInput = document.getElementById("coffee_price");
-var photoInput = document.getElementById("coffee_photo");
+var nameInput = document.getElementById("name");
+var priceInput = document.getElementById("price");
 
-
-
+var show = document.getElementById("display");
 
 function insert() {
-    coffee_name.push(nameInput.value);
-    coffee_price.push(priceInput.value);
-    coffee_photo.push(photoInput.value);
+    names.push(nameInput.value);
+    prices.push(priceInput.value);
 
-    coffee_name.push(nameInput.innerHTML);
-    coffee_price.push(priceInput.innerHTML);
-    coffee_photo.push(photoInput.innerHTML);
+    clearAndShow();
+}
+function clearAndShow() {
+    nameInput.value = "";
+    priceInput.value = "";
+
+    //show
+    show.innerHTML = "";
+    show.innerHTML += "name: " + names.join(", ") + "<br>";
+    show.innerHTML += "price: " + prices.join(", ");
 }

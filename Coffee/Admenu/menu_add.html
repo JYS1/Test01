@@ -3,24 +3,44 @@
     <head>
         <meta charset="utf-8">
         <title>Menu Add</title>
-        <link rel="stylesheet" href="..\style.css">
-        <script type="text/javascript" scr="save.js"></script>
     </head>
-    <body>
-    <form>
-        <label for="coffee_name">커피 이름</label>
-        <input type="text" name="커피이름" placeholder="커피이름" id="coffee_name"><br>
-        <label for="coffee_price">가격</label>
-        <input type="text" name="커피가격" placeholder="가격" id="coffee_price"><br>
-        <label for="coffee_photo">사진</label>
-        <input type="file" name="사진" id="coffee_photo"><br>
-        <div id="add_button">
-            <input type="button" value="등록" onclick="insert()">
-            <input type="button" value="취소" onclick="location.href='menu_add.html'">
-            <input type="button" value="이전" onclick="location.href='../Admenu.html'">
-        </div>
+    <script>
+        function Add(){
+            var table1 = document.getElementById("insertTable");
+
+            var tr = document.createElement("tr");
+            var t1 = document.createElement("td");
+            t1.innerText = document.all.name.value;
+            var t2 = document.createElement("td");
+            t2.innerText = document.all.price.value;
+            var t3 = document.createElement("td");
+            t2.innerText = document.all.price.value;
+
+            tr.appendChild(t1);
+            tr.appendChild(t2);
+            tr.appendChild(t3);
+
+
+            table1.appendChild(tr);
+            table1.save
+            }
+    </script>
+        </head>
+        <body>
+            <h3>메뉴등록</h3>
+            <table border= 1px; width="300" id="insertTable">
+                <tr>
+                    <th width="100">커피이름</th>
+                    <th width="100">가격</th>
+                    <th width="100">사진</th>
+                </tr>
+            </table>
+            <br>
+            커피이름<input type="text" size="10" name="name">
+            커피가격<input type="text" size="10" name="price">
+            사진<input type="file" size="10" name="photo">
+        <button onclick="Add()">추가</button>
+
     </form>
-        <div id="display">
-        </div>
     </body>
 </html>
